@@ -24,6 +24,23 @@ ul {
   list-style: none;
 }
 
+address {
+  font-style: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Логотип */
 
 .logo {
@@ -49,4 +66,157 @@ ul {
   line-height: 1.17;
 
   color: var(--second-text-color);
+}
+
+.site-nav-link:focus,
+.site-nav-link:hover {
+  color: var(--accent-color);
+}
+
+.auth-nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.17;
+
+  color: var(--main-text-color);
+}
+
+.auth-nav-link:focus,
+.auth-nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Герой */
+.hero {
+  background-color: #2f303a;
+}
+
+.hero-title {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.hero-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  cursor: pointer;
+
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/* Секция преимущества */
+
+.advantages-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+
+  color: var(--second-text-color);
+}
+
+.advantages-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Список услуг */
+
+.servises-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--second-text-color);
+}
+
+/* Наша команда */
+
+.team-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--second-text-color);
+}
+
+.team-person {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.17;
+
+  color: var(--second-text-color);
+}
+
+.team-text {
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+/* Футер */
+
+.site-end {
+  background-color: #2f303a;
+}
+
+.logo-studio.studio-end {
+  color: #ffffff;
+}
+
+.location-link {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: #ffffff;
+}
+
+.location-link:focus,
+.location-link:hover {
+  color: var(--accent-color);
+}
+
+
+/* Портфолио */
+
+.portfolio-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  color: var(--second-text-color);
+  background-color: #F5F4FA;
+  cursor: pointer;
+}
+
+
+.portfolio-btn:hover, .portfolio-btn:focus {
+  background-color: var(--accent-color);
+   color: #ffffff;
+}
+
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  
+
+  color: var(--second-text-color);
+}
+
+.portfolio-text {
+    font-size: 16px;
+  line-height: 1.87;
 }
