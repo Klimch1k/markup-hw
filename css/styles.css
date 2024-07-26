@@ -16,12 +16,32 @@ body {
   background-color: var(--main-bg-color);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 address {
@@ -41,13 +61,47 @@ address {
   overflow: hidden;
 }
 
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Хедер */
+
+.site-start {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+}
+
+.head-position {
+  display: flex;
+  align-items: center;
+}
+
 /* Логотип */
+
+.position-logo-head {
+  margin-right: 93px;
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo-web {
@@ -60,7 +114,23 @@ address {
 
 /* Навигация  */
 
+.site-nav-list {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav-link.active-page {
+  color: var(--accent-color);
+}
+
 .site-nav-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.17;
@@ -73,10 +143,25 @@ address {
   color: var(--accent-color);
 }
 
+.auth-nav-list {
+  display: flex;
+  margin-left: auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.auth-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .auth-nav-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 1.17;
+  letter-spacing: 0.02em;
 
   color: var(--main-text-color);
 }
@@ -89,25 +174,45 @@ address {
 /* Герой */
 .hero {
   background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
+  margin-bottom: 30px;
+
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 
   color: #ffffff;
 }
 
 .hero-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 216px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 4px;
+  border-color: var(--accent-color);
+
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
 
   color: #ffffff;
   background-color: var(--accent-color);
@@ -115,17 +220,29 @@ address {
 
 /* Секция преимущества */
 
+.advantages-list {
+  display: flex;
+
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .advantages-title {
+  margin-bottom: 10px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.17;
-
+  letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
 
 .advantages-text {
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 /* Список услуг */
@@ -135,6 +252,7 @@ address {
   font-weight: 700;
   line-height: 1.17;
   text-align: center;
+  letter-spacing: 0.03em;
 
   color: var(--second-text-color);
 }
@@ -146,6 +264,7 @@ address {
   font-weight: 700;
   line-height: 1.17;
   text-align: center;
+  letter-spacing: 0.03em;
 
   color: var(--second-text-color);
 }
@@ -154,6 +273,7 @@ address {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.17;
+  letter-spacing: 0.03em;
 
   color: var(--second-text-color);
 }
@@ -161,6 +281,7 @@ address {
 .team-text {
   font-size: 16px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 
 /* Футер */
@@ -176,6 +297,7 @@ address {
 .location-link {
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 
   color: #ffffff;
 }
@@ -184,7 +306,6 @@ address {
 .location-link:hover {
   color: var(--accent-color);
 }
-
 
 /* Портфолио */
 
@@ -196,27 +317,25 @@ address {
   text-align: center;
 
   color: var(--second-text-color);
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   cursor: pointer;
 }
 
-
-.portfolio-btn:hover, .portfolio-btn:focus {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
   background-color: var(--accent-color);
-   color: #ffffff;
+  color: #ffffff;
 }
-
 
 .portfolio-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
-  
 
   color: var(--second-text-color);
 }
 
 .portfolio-text {
-    font-size: 16px;
+  font-size: 16px;
   line-height: 1.87;
 }
