@@ -222,7 +222,7 @@ address {
 
 .advantages-list {
   display: flex;
-
+  align-items: baseline;
 }
 
 .advantages-list-item:not(:last-child) {
@@ -247,7 +247,13 @@ address {
 
 /* Список услуг */
 
+.section.servises-section {
+  padding-top: 0;
+}
+
 .servises-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   font-weight: 700;
   line-height: 1.17;
@@ -255,11 +261,26 @@ address {
   letter-spacing: 0.03em;
 
   color: var(--second-text-color);
+}
+
+.servises-list {
+  display: flex;
+  align-items: center;
+}
+
+.servises-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Наша команда */
 
+.section.team-section {
+  background-color: #f5f4fa;
+}
+
 .team-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   font-weight: 700;
   line-height: 1.17;
@@ -269,11 +290,33 @@ address {
   color: var(--second-text-color);
 }
 
+.team-list {
+  display: flex;
+  align-items: center;
+}
+
+.team-list-item {
+  padding-bottom: 30px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--main-bg-color);
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team-person {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  text-align: center;
 
   color: var(--second-text-color);
 }
@@ -282,12 +325,21 @@ address {
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 /* Футер */
 
 .site-end {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.logo.logo-footer {
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .logo-studio.studio-end {
@@ -295,6 +347,9 @@ address {
 }
 
 .location-link {
+  padding-top: 3px;
+  padding-bottom: 3px;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -307,30 +362,89 @@ address {
   color: var(--accent-color);
 }
 
+.address-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.auth-nav-link.auth-link-footer {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 /* Портфолио */
 
-.portfolio-btn {
+/* Кнопки фільтру */
+.filter-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btn {
+  border-radius: 4px;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  letter-spacing: 0.03em;
 
   color: var(--second-text-color);
   background-color: #f5f4fa;
   cursor: pointer;
+  border-color: transparent;
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.filter-btn:hover,
+.filter-btn:focus {
   background-color: var(--accent-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Приклади робіт */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.img-caption {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
 }
 
 .portfolio-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
+  letter-spacing: 0.06em;
 
   color: var(--second-text-color);
 }
@@ -338,4 +452,7 @@ address {
 .portfolio-text {
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
 }
