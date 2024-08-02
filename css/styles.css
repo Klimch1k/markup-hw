@@ -155,6 +155,9 @@ address {
 }
 
 .auth-nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 6px;
   padding-bottom: 6px;
 
@@ -171,11 +174,29 @@ address {
   color: var(--accent-color);
 }
 
+.auth-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /* Герой */
 .hero {
-  background-color: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/imgherobg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #c4c4c4;
 }
 
 .hero-title {
@@ -227,6 +248,18 @@ address {
 
 .advantages-list-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.advantages-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  min-height: 120px;
+  border-radius: 4px;
+  width: 270px;
+
+  background-color: #f5f4fa;
 }
 
 .advantages-title {
@@ -328,12 +361,103 @@ address {
   text-align: center;
 }
 
+.networks-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 16px;
+}
+
+.networks-list-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.network-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  color: #afb1b8;
+}
+
+.network-icon {
+  fill: currentColor;
+}
+
+.network-link:focus,
+.network-link:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* Клієнти */
+
+.clients-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--second-text-color);
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-list-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  cursor: pointer;
+  color: #afb1b8;
+}
+
+.client-link:focus,
+.client-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
 /* Футер */
 
 .site-end {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.footer-position {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-footer-position {
+  margin-right: 70px;
 }
 
 .logo.logo-footer {
@@ -367,8 +491,29 @@ address {
 }
 
 .auth-nav-link.auth-link-footer {
+  display: inline;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+.footer-networks-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.network-link.network-end {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.network-link.network-end:focus,
+.network-link.network-end:hover {
+  background-color: var(--accent-color);
 }
 
 /* Портфолио */
@@ -419,6 +564,15 @@ address {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .img-caption {

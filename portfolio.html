@@ -45,10 +45,19 @@
         </nav>
         <ul class="auth-nav-list">
           <li class="auth-nav-item">
-            <a class="auth-nav-link" href="">info@devstudio.com</a>
+            <a class="auth-nav-link" href="">
+              <svg class="auth-icon" width="16" height="12">
+                <use href="./images/icons-sprite.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
           </li>
           <li class="auth-nav-item">
-            <a class="auth-nav-link" href="">+38 096 111 11 11</a>
+            <a class="auth-nav-link" href="">
+              <svg class="auth-icon" width="10" height="16">
+                <use href="./images/icons-sprite.svg#icon-mobile"></use></svg
+              >+38 096 111 11 11</a
+            >
           </li>
         </ul>
       </div>
@@ -76,16 +85,20 @@
           </ul>
           <ul class="portfolio-list">
             <li class="portfolio-list-item">
-              <a href="">
-                <img src="./images/imgtexnokrak.jpg" alt="Ноутбук" width="370" />
+              <a class="portfolio-link" href="">
+                <img
+                  src="./images/imgtexnokrak.jpg"
+                  alt="Ноутбук"
+                  width="370"
+                />
                 <div class="img-caption">
                   <h2 class="portfolio-title">Технокряк</h2>
                   <p class="portfolio-text">Веб-сайт</p>
+                </div>
               </a>
-              </div>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img
                   src="./images/imgposter.jpg"
                   alt="Два баскетболісти"
@@ -100,7 +113,7 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img
                   src="./images/imgseafood.jpg"
                   alt="Лого рибного ресторану"
@@ -113,7 +126,7 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img src="./images/imgprime.jpg" alt="Навушники" width="370" />
                 <div class="img-caption">
                   <h2 class="portfolio-title">Проєкт Prime</h2>
@@ -122,8 +135,12 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
-                <img src="./images/imgboxes.jpg" alt="Дві коробки" width="370" />
+              <a class="portfolio-link" href="">
+                <img
+                  src="./images/imgboxes.jpg"
+                  alt="Дві коробки"
+                  width="370"
+                />
                 <div class="img-caption">
                   <h2 class="portfolio-title">Проєкт Boxes</h2>
                   <p class="portfolio-text">Додаток</p>
@@ -131,7 +148,7 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img
                   src="./images/imginspiration.jpg"
                   alt="Монітор компьютера"
@@ -144,7 +161,7 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img
                   src="./images/imglimitededition.jpg"
                   alt="Відкритий журнал"
@@ -157,7 +174,7 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img src="./images/imglab.jpg" alt="Бірка" width="370" />
                 <div class="img-caption">
                   <h2 class="portfolio-title">Проєкт LAB</h2>
@@ -166,13 +183,13 @@
               </a>
             </li>
             <li class="portfolio-list-item">
-              <a href="">
+              <a class="portfolio-link" href="">
                 <img src="./images/imggrowing.jpg" alt="Ноутбук" width="370" />
                 <div class="img-caption">
                   <h2 class="portfolio-title">Growing Business</h2>
                   <p class="portfolio-text">Додаток</p>
+                </div>
               </a>
-              </div>
             </li>
           </ul>
         </div>
@@ -180,33 +197,70 @@
     </main>
     <footer class="site-end">
       <div class="conteiner">
-        <a class="logo logo-footer" href="/"
-          ><span class="logo-web">Web</span
-          ><span class="logo-studio studio-end">Studio</span></a
-        >
-        <address>
-          <ul class="address-list">
-            <li class="address-list-item">
-              <a
-                class="location-link"
-                href="https://goo.gl/maps/8ZF42JuxDTGgMg426"
-                target="_blank"
-                rel="noopener-nofollow-noreferrer"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="address-list-item">
-              <a class="auth-nav-link auth-link-footer" href=""
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="address-list-item">
-              <a class="auth-nav-link auth-link-footer" href=""
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <div class="footer-position">
+          <div class="address-footer-position">
+            <a class="logo logo-footer" href="/"
+              ><span class="logo-web">Web</span
+              ><span class="logo-studio studio-end">Studio</span></a
+            >
+            <address>
+              <ul class="address-list">
+                <li class="address-list-item">
+                  <a
+                    class="location-link"
+                    href="https://goo.gl/maps/8ZF42JuxDTGgMg426"
+                    target="_blank"
+                    rel="noopener-nofollow-noreferrer"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address-list-item">
+                  <a class="auth-nav-link auth-link-footer" href=""
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-list-item">
+                  <a class="auth-nav-link auth-link-footer" href=""
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div>
+            <h3 class="footer-networks-title">приєднуйтесь</h3>
+            <ul class="networks-list">
+              <li class="networks-list-item">
+                <a class="network-link network-end" aria-label="Instagram">
+                  <svg class="network-icon" width="20" height="20">
+                    <use href="./images/icons-sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks-list-item">
+                <a class="network-link network-end" aria-label="Twitter">
+                  <svg class="network-icon" width="20" height="20">
+                    <use href="./images/icons-sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks-list-item">
+                <a class="network-link network-end" aria-label="Facebook">
+                  <svg class="network-icon" width="20" height="20">
+                    <use href="./images/icons-sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks-list-item">
+                <a class="network-link network-end" aria-label="Linkedin">
+                  <svg class="network-icon" width="20" height="20">
+                    <use href="./images/icons-sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
