@@ -6,6 +6,8 @@
   --second-text-color: #212121;
 
   --main-bg-color: #ffffff;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Общие стили */
@@ -120,6 +122,10 @@ address {
   padding-bottom: 32px;
 }
 
+.site-nav-item {
+  position: relative;
+}
+
 .site-nav-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -128,12 +134,29 @@ address {
   color: var(--accent-color);
 }
 
+.active-page::after {
+  content: " ";
+  position: absolute;
+  top: 52.5px;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--accent-color);
+}
+
 .site-nav-link {
   padding-top: 6px;
   padding-bottom: 6px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.17;
+
+  transition: color 250ms var(--timing-function);
 
   color: var(--second-text-color);
 }
@@ -166,6 +189,8 @@ address {
   line-height: 1.17;
   letter-spacing: 0.02em;
 
+  transition: color 250ms var(--timing-function);
+
   color: var(--main-text-color);
 }
 
@@ -181,7 +206,7 @@ address {
 
 /* Герой */
 .hero {
-  padding-top: 200px;
+  padding-top: 166px;
   padding-bottom: 200px;
 
   max-width: 1600px;
@@ -305,6 +330,34 @@ address {
   margin-right: 30px;
 }
 
+.servises-thumb {
+  position: relative;
+}
+
+.servises-item-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 70px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
 /* Наша команда */
 
 .section.team-section {
@@ -383,6 +436,9 @@ address {
   cursor: pointer;
 
   color: #afb1b8;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 
 .network-icon {
@@ -431,6 +487,9 @@ address {
 
   cursor: pointer;
   color: #afb1b8;
+
+  transition: color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 }
 
 .client-link:focus,
@@ -479,6 +538,8 @@ address {
   letter-spacing: 0.03em;
 
   color: #ffffff;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .location-link:focus,
@@ -548,6 +609,10 @@ address {
   background-color: #f5f4fa;
   cursor: pointer;
   border-color: transparent;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .filter-btn:hover,
@@ -568,11 +633,45 @@ address {
 
 .portfolio-link {
   display: block;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-link:focus .portfolio-dicription,
+.portfolio-link:hover .portfolio-dicription {
+  transform: translateY(0);
+}
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-dicription {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+
+  transition: transform 250ms var(--timing-function);
 }
 
 .img-caption {
@@ -609,4 +708,65 @@ address {
   letter-spacing: 0.03em;
 
   color: var(--main-text-color);
+}
+
+/* МОДАЛКА */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: scale(1);
+  transition: transform 250ms var(--timing-function);
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.3);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: #ffffff;
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  min-width: 30px;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  fill: currentColor;
+  background: var(--main-bg-color);
+  transition: fill 250ms var(--timing-function);
+
+  cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  fill: var(--accent-color);
 }
